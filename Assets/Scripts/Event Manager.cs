@@ -25,8 +25,8 @@ public class EventManager : MonoBehaviour
             Debug.Log("Zahl: " + rInt);
 
 
-            if(rInt == 2) {
-                
+            if(rInt == 6) {
+                StartRotating()
             }
 
 
