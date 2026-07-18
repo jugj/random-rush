@@ -21,9 +21,6 @@ public class SpielerBewegung : MonoBehaviour
         if(Input.GetKey("d")){
             transform.Translate(Vector2.right*Time.deltaTime*geschwindigkeit);
         }
-
-        if(Input.GetKey("space")){
-            transform.Translate(Vector2.up*Time.deltaTime*geschwindigkeit);
-        }
+        
     }
 }
