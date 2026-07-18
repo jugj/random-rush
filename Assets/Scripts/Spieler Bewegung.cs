@@ -20,17 +20,14 @@ public class SpielerBewegung : MonoBehaviour {
             transform.Translate(Vector2.left*Time.deltaTime*geschwindigkeit);
             anim.SetBool("PlayerMoving", true);
             anim.SetBool("PlayerLeft", true);
-            Debug.Log("lll");
         }
         else if(Input.GetKey("d")){
             transform.Translate(Vector2.right*Time.deltaTime*geschwindigkeit);
             anim.SetBool("PlayerMoving", true);
             anim.SetBool("PlayerLeft", false);
-            Debug.Log("rrr");
         }
         else {
             anim.SetBool("PlayerMoving", false);
-            Debug.Log("asss");
         }
     }
 
