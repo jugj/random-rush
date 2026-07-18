@@ -6,10 +6,9 @@ public class BlobSpawner : MonoBehaviour
 {
     public GameObject blobPrefab;
     public Transform spawnPoint;
+    [SerializeField]
+    GameObject Blob_active;
 
-    public int rInt;
-
-    private bool started = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,19 +19,16 @@ public class BlobSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(rInt == 1 && !started)
+        if(Blob_active == null)
         {
-            started = true;
-            StartCoroutine(SpawnBlob());
+            SpawnBlob();
         }
     }
 
-    IEnumerator SpawnBlob()
+    void SpawnBlob()
     {
-        while (true)
-        {
-            Instantiate(blobPrefab, spawnPoint.position, Quaternion.identity);
-            yield return new WaitForSeconds(5f);
-        }
+
+            Blob_active=Instantiate(blobPrefab, spawnPoint.position, Quaternion.identity);
+
     }
 }

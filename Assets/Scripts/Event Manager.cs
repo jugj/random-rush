@@ -5,6 +5,7 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     float timePassed = 0f;
+    public int rInt;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class EventManager : MonoBehaviour
 
         if(timePassed > 10f)
         {
-            int rInt = Random.Range(1, 21);
+            rInt = Random.Range(1, 21);
             Debug.Log("Zahl: " + rInt);
 
             if(rInt == 1) {

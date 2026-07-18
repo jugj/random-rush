@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine;using UnityEngine.SceneManagement;
 
 public class SpielerBewegung : MonoBehaviour
 {   [SerializeField]
@@ -22,5 +22,13 @@ public class SpielerBewegung : MonoBehaviour
             transform.Translate(Vector2.right*Time.deltaTime*geschwindigkeit);
         }
         
+    }
+
+    // Start is called before the first frame update
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("KillObject")) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
