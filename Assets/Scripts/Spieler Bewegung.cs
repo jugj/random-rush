@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;using UnityEngine.SceneManagement;
 
-public class SpielerBewegung : MonoBehaviour
-{   [SerializeField]
-    float geschwindigkeit = 3f;
+public class SpielerBewegung : MonoBehaviour {
+    [SerializeField]
+    public float geschwindigkeit = 3f;
+    
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -16,12 +18,20 @@ public class SpielerBewegung : MonoBehaviour
     {
         if(Input.GetKey("a")){
             transform.Translate(Vector2.left*Time.deltaTime*geschwindigkeit);
+            anim.SetBool("PlayerMoving", true);
+            anim.SetBool("PlayerLeft", true);
+            Debug.Log("lll");
         }
-        
-        if(Input.GetKey("d")){
+        else if(Input.GetKey("d")){
             transform.Translate(Vector2.right*Time.deltaTime*geschwindigkeit);
+            anim.SetBool("PlayerMoving", true);
+            anim.SetBool("PlayerLeft", false);
+            Debug.Log("rrr");
         }
-        
+        else {
+            anim.SetBool("PlayerMoving", false);
+            Debug.Log("asss");
+        }
     }
 
     // Start is called before the first frame update
