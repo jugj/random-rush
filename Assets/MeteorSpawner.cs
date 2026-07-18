@@ -10,26 +10,28 @@ public class MeteorSpawner : MonoBehaviour
     GameObject Fusspilz;
     [SerializeField]
     GameObject Meteor;
-    int rInt = 3;
+    EventManager EventManager;
    // Start is called before the first frame update
     void Start()
     {
-        
+        EventManager=gameObject.GetComponent<EventManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(rInt == 3){
+        if(EventManager.rInt == 3){
             isActive = true;
         }
 
         if(isActive){
             if(timer == null){
-                timer=new Timer(2.5f);
+                timer=gameObject.AddComponent<Timer>();
+                timer.Ablaufzeit=2.5f;
             }
             if(timer.zeitabgelaufen()){
                  Instantiate(Meteor, Fusspilz.transform.position, Quaternion.identity);
+                 Destroy(timer);
             }
         }
     }

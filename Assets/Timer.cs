@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    float Ablaufzeit;
-
-    public Timer(float Ablaufzeit){
-        this.Ablaufzeit = Ablaufzeit;
-    }
+    public float Ablaufzeit;
 
     public bool zeitabgelaufen(){
         return Ablaufzeit<=0;
@@ -23,5 +19,6 @@ public class Timer : MonoBehaviour
     void Update()
     {
         Ablaufzeit=Ablaufzeit-Time.deltaTime;
+        Debug.Log(Ablaufzeit);
     }
 }

@@ -13,6 +13,6 @@ public class positionMeteor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Random.Range(-7, 7), 4, 0);
+        transform.position=new Vector3(Random.Range(-7, 7), 4, 0);
     }
 }
