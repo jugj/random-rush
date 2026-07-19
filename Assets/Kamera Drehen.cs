@@ -5,9 +5,9 @@ using UnityEngine;
 public class KameraDrehen : MonoBehaviour
 {
     public float stepRotation = 24f;
-    public float interval = 10f;
+    public float interval = 11f;
 
-    void StartRotating()
+    public void StartRotating()
     {
         StartCoroutine(RotateStep());
     }
@@ -16,7 +16,7 @@ public class KameraDrehen : MonoBehaviour
     {
         while (true)
         {
-            transform.Rotate(0f, stepRotation, 0f);
+            transform.Rotate(0f, 0f, stepRotation);
             yield return new WaitForSeconds(interval);
         }
     }
