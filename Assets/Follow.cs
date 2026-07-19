@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Basierend auf diesen Tutorials: https://www.youtube.com/watch?v=GtX1p4cwYOc und https://www.youtube.com/watch?v=pWh5G17US5U
 
+//if(rInt == 4)
 public class Triangle : MonoBehaviour
 {
     public Transform[] zielPunkte;

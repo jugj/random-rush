@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class KameraDrehen : MonoBehaviour
 {
-    public float stepRotation = 24f;
-    public float interval = 11f;
+    public float stepRotation = 45f;
+    public float interval = 10f;
 
     public void StartRotating()
     {
         StartCoroutine(RotateStep());
+        Debug.Log("Text");
     }
 
     IEnumerator RotateStep()

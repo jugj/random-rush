@@ -7,7 +7,9 @@ public class EventManager : MonoBehaviour
     float timePassed = 0f;
     public int rInt;
     public Flashbang flashbang;
-    
+    [SerializeField]
+    GameObject Camera;
+    public bool CameraRotatingActive = false;
 
 
     // Start is called before the first frame update
@@ -23,13 +25,20 @@ public class EventManager : MonoBehaviour
 
         if(timePassed > 10f)
         {
+            if(rInt == 2) {
+                if(!CameraRotatingActive)
+                {
+                    CameraRotatingActive = true;
+                    Camera.GetComponent<KameraDrehen>().StartRotating();
+                    Debug.Log("string");
+                }
+            }
+            
             rInt = Random.Range(1, 21);
             Debug.Log("Zahl: " + rInt);
 
 
-            if(rInt == 6) {
-                //StartRotating();
-            }
+            
 
 
             timePassed = 0f;
