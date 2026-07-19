@@ -6,6 +6,9 @@ public class EventManager : MonoBehaviour
 {
     float timePassed = 0f;
     public int rInt;
+    public Flashbang flashbang;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +26,9 @@ public class EventManager : MonoBehaviour
             rInt = Random.Range(1, 21);
             Debug.Log("Zahl: " + rInt);
 
-            if(rInt == 1) {
 
+            if(rInt == 6) {
+                //StartRotating();
             }
 
 
