@@ -37,7 +37,7 @@ public class Flashbang : MonoBehaviour
 
             sr.color = new Color(1, 1, 1, 0);
 
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(9f);
         }
     }
 
