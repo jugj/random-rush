@@ -23,7 +23,7 @@ public class Lifecounter : MonoBehaviour
     {
         if(sliderleben.value <= 0)
         {
-            setzeleben(10f);
+            setzeleben(9f);
         }
         else
         {
