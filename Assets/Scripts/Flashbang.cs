@@ -18,24 +18,29 @@ public class Flashbang : MonoBehaviour
 
     IEnumerator FlashRoutine()
     {
-        // Sofort komplett weiß
-        sr.color = new Color(1, 1, 1, 1);
+        while(true) {
+            // Sofort komplett weiß
+            sr.color = new Color(1, 1, 1, 1);
 
-        // 2 Sekunden warten
-        yield return new WaitForSeconds(1f);
+            // 2 Sekunden warten
+            yield return new WaitForSeconds(1f);
 
-        // Langsam ausblenden
-        float t = 1f;
+            // Langsam ausblenden
+            float t = 1f;
 
-        while (t > 0)
-        {
-            t -= 0.05f;
-            sr.color = new Color(1, 1, 1, t);
-            yield return new WaitForSeconds(0.02f);
+            while (t > 0)
+            {
+                t -= 0.05f;
+                sr.color = new Color(1, 1, 1, t);
+                yield return new WaitForSeconds(0.02f);
+            }
+
+            sr.color = new Color(1, 1, 1, 0);
+
+            yield return new WaitForSeconds(10f);
         }
-
-        sr.color = new Color(1, 1, 1, 0);
     }
+
     void Update()
     {
         if (eventManager.rInt == 5)
