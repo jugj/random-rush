@@ -32,9 +32,14 @@ public class EventManager : MonoBehaviour
                     Camera.GetComponent<KameraDrehen>().StartRotating();
                     Debug.Log("string");
                 }
+                else
+                {
+                    rInt = Random.Range(1, 7);
+                    Debug.Log("Zahl: " + rInt);
+                }
             }
             
-            rInt = Random.Range(1, 21);
+            rInt = Random.Range(1, 7);
             Debug.Log("Zahl: " + rInt);
 
 

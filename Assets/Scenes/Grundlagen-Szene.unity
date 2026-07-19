@@ -155,8 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f63a13ab08899540a126dc5afb9e956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rInt: 5
+  rInt: 2
   flashbang: {fileID: 0}
+  Camera: {fileID: 0}
+  CameraRotatingActive: 0
 --- !u!4 &22661215
 Transform:
   m_ObjectHideFlags: 0
