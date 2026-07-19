@@ -2,31 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Basierend auf diesen Tutorials: https://www.youtube.com/watch?v=GtX1p4cwYOc und https://www.youtube.com/watch?v=pWh5G17US5U
 
-//if(rInt == 4)
-public class Triangle : MonoBehaviour
+public class Fly : MonoBehaviour
 {
     public Transform[] zielPunkte;
     public int aktuellerPunkt = 0;
     public float geschwindigkeit = 2f;
     public EventManager eventManager;
-    public bool triggered = false;
+    public bool bananatuff = false;
 
     void Start() { 
-        transform.position = zielPunkte[aktuellerPunkt].position;    
+        transform.position = zielPunkte[aktuellerPunkt].position;  
+        GameObject gameManager = GameObject.Find("Game Manager");
+        eventManager = gameManager.GetComponent<EventManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(triggered == false && eventManager.rInt == 4){
-            triggered = true;
+        if(bananatuff == false && eventManager.rInt == 6){
+            bananatuff = true;
         }
 
-        if(triggered == false){
+        if(bananatuff == false){
             return;
         }
-
         //bewege zum aktuellen zielpunkt
         transform.position = Vector2.MoveTowards(transform.position, zielPunkte[aktuellerPunkt].position, geschwindigkeit * Time.deltaTime);
 
@@ -46,10 +47,6 @@ public class Triangle : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(!triggered) {
-            return;
-        }
-
         if (collision.transform.position.y -0.5 > transform.position.y)
         {
             collision.transform.SetParent(transform);
@@ -57,10 +54,6 @@ public class Triangle : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D other)
     {
-        if(!triggered) {
-            return;
-        }
-
         other.transform.SetParent(null);
     }
 }
