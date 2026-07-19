@@ -28,7 +28,10 @@ public class Jump : MonoBehaviour
         {
             isGrounded = true;
         }
-
+        else if(collision.gameObject.name == "Square (3)")
+        {
+            isGrounded = true;
+        }      
 
     }
       

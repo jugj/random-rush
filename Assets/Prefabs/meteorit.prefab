@@ -4844,7 +4844,7 @@ GameObject:
   - component: {fileID: 1872446228946331193}
   - component: {fileID: 5575555448146853585}
   m_Layer: 0
-  m_Name: Hexagon Pointed-Top
+  m_Name: meteorit
   m_TagString: KillObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
