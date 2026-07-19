@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-GameJam - Die Schlucht-1.0";
 const contentToCache = [
-    "Build/docs.loader.js",
-    "Build/docs.framework.js",
-    "Build/docs.data",
-    "Build/docs.wasm",
+    "Build/bb0d9ecdb05db3e84da20bd14a4f84dc.loader.js",
+    "Build/aa31e0eeed01930b2856483840e63ab2.framework.js",
+    "Build/2b27bad83f7623fe05aae2110449af28.data",
+    "Build/0ab15a336fcfba780276830342e10fcc.wasm",
     "TemplateData/style.css"
 
 ];
