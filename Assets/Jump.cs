@@ -18,7 +18,7 @@ public class Jump : MonoBehaviour
     {
         if (Input.GetKey("w") && isGrounded)
         {
-             rb.velocity = new Vector2(rb.velocity.x, 16f);
+             rb.velocity = new Vector2(rb.velocity.x, 26f);
         }
     }
 

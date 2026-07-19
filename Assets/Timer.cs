@@ -19,6 +19,6 @@ public class Timer : MonoBehaviour
     void Update()
     {
         Ablaufzeit=Ablaufzeit-Time.deltaTime;
-        Debug.Log(Ablaufzeit);
+        //Debug.Log(Ablaufzeit);
     }
 }
