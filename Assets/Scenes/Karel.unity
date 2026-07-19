@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rInt: 4
+  flashbang: {fileID: 0}
 --- !u!4 &22661215
 Transform:
   m_ObjectHideFlags: 0
