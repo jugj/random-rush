@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6592511265148441788}
   - component: {fileID: 3495412111274727190}
   - component: {fileID: 1012763469612138758}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: blob
   m_TagString: KillObject
   m_Icon: {fileID: 0}
